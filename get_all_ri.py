@@ -14,7 +14,7 @@ def get_all_reserved_instances():
     from boto.ec2 import connect_to_region
     import time
     # Setting global variables
-    envn = 'RIComparisonServiceAccount'  # this is used to call the proper .aws profile for credentials
+    envn = 'AWSProfileAccount'  # this is used to call the proper .aws profile for credentials
     region = 'us-east-1'
     ec2conn = connect_to_region(region, profile_name=envn)
     ri_report = open(report_home + '/all_reserved_instances_' + time.strftime("%Y%m%d" + ".txt"), 'w')
